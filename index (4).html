@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leeds Sofa Company — Sofas and bespoke furniture made in Leeds</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e9;--bg2:#ece4d6;--ink:#0e1a2b;--mute:#5f6a78;--acc:#b97a3b;--acc2:#d89a56;--sage:#8fae9a;--line:#ddd2bf;--dk:#0e1a2b;--on:#fff;--card:#fffaf2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1220;--bg2:#101b2d;--ink:#f3ede2;--mute:#9aa7b8;--acc:#e0a463;--acc2:#f0bb80;--line:#223149;--dk:#060c16;--on:#1a1006;--card:#0f1a2b}}
+:root[data-theme="dark"]{--bg:#0a1220;--bg2:#101b2d;--ink:#f3ede2;--mute:#9aa7b8;--acc:#e0a463;--acc2:#f0bb80;--line:#223149;--dk:#060c16;--on:#1a1006;--card:#0f1a2b}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{overflow-anchor:none}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 "DM Sans",system-ui,sans-serif;padding-bottom:74px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.05}
+.w{max-width:1100px;margin:0 auto;padding:0 22px}
+.curtain{position:fixed;inset:0;z-index:200;background:var(--dk);display:grid;place-items:center;pointer-events:none;animation:cur 1s 1.2s cubic-bezier(.77,0,.18,1) forwards}
+.curtain div{text-align:center;color:#f3ede2;font:400 clamp(34px,10vw,72px)/1 "DM Serif Display",Georgia,serif;animation:fi .9s .1s both}
+.curtain small{display:block;font:500 12px "DM Sans",sans-serif;letter-spacing:.35em;text-transform:uppercase;color:#d89a56;margin-top:14px}
+@keyframes cur{to{transform:translateY(-100%);visibility:hidden}}
+@keyframes fi{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes fl{50%{transform:translateY(-10px)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:400 21px "DM Serif Display",serif}.logo i{color:var(--acc)}
+nav{display:none;gap:26px;font-size:14px;font-weight:500}
+nav a{color:var(--mute);transition:.2s;position:relative}nav a.on,nav a:hover{color:var(--ink)}
+nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--acc)}
+.mb{width:42px;height:42px;border:0;background:none;display:grid;place-items:center;cursor:pointer}
+.mb i,.mb i::before{display:block;width:22px;height:2px;background:var(--ink);position:relative;transition:.3s}.mb i::before{content:"";top:-7px;position:absolute}
+.menu{position:fixed;inset:0;z-index:40;background:var(--dk);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:80px 30px;transform:translateY(-100%);transition:transform .6s cubic-bezier(.77,0,.18,1);visibility:hidden}
+.menu.open{transform:none;visibility:visible}
+.menu a{font:400 40px/1.25 "DM Serif Display",serif;color:#f3ede2}.menu a:hover{color:var(--acc2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--acc2),var(--acc));color:var(--on);padding:15px 28px;border-radius:999px;font:700 15px "DM Sans",sans-serif;border:0;cursor:pointer;transition:transform .2s,filter .3s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}.btn.o{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn.o:hover{background:var(--ink);color:var(--bg)}
+.tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.tag::before{content:"";display:inline-block;width:26px;height:1px;background:var(--acc);vertical-align:middle;margin-right:12px}
+.pg{display:none}.pg.on{display:block;animation:fi .7s both}
+h1{font-size:clamp(44px,11.5vw,98px);margin:14px 0 18px;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--acc)}
+h2{font-size:clamp(32px,7vw,56px);margin:10px 0 12px}
+.lead{color:var(--mute);font-size:18px;max-width:480px}
+.sub{color:var(--mute);margin-bottom:30px;max-width:540px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero{padding:40px 0;position:relative;overflow:hidden;background:radial-gradient(ellipse at 90% 0,color-mix(in srgb,var(--sage) 28%,transparent),transparent 55%),radial-gradient(ellipse at 0 100%,color-mix(in srgb,var(--acc) 16%,transparent),transparent 55%)}
+.hero .w{display:grid;gap:30px}
+.hero .tag,.hero h1,.hero .lead,.hero .cta{animation:up 1s both}
+.hero .tag{animation-delay:1.5s}.hero h1{animation-delay:1.65s}.hero .lead{animation-delay:1.85s}.hero .cta{animation-delay:2s}
+.stage{--f:#c9b79c;--l:#a8794a;position:relative;display:grid;place-items:center;border-radius:28px;background:var(--bg2);border:1px solid var(--line);padding:30px 14px 18px;overflow:hidden}
+.hero .stage{animation:up 1.2s 1.6s both}
+.stage svg{width:100%;max-width:520px;height:auto;overflow:visible}
+.hero .stage svg{animation:fl 6s ease-in-out infinite}
+.sf *{transition:fill .8s}
+.sf .bk{fill:color-mix(in srgb,var(--f) 80%,#000)}.sf .st{fill:var(--f)}.sf .cu{fill:color-mix(in srgb,var(--f) 90%,#fff)}.sf .ar{fill:color-mix(in srgb,var(--f) 88%,#000)}.sf .lg{fill:var(--l)}.sf .sh{fill:rgba(0,0,0,.18)}
+.stage small{margin-top:8px;font-size:12px;color:var(--mute)}
+.mq{overflow:hidden;white-space:nowrap;background:var(--dk);padding:16px 0}
+.mq div{display:inline-block;animation:mq 34s linear infinite;font:italic 400 30px "DM Serif Display",serif;color:#d89a56}
+.mq span{margin:0 26px}.mq em{font-style:normal;color:#8fae9a;opacity:.7}
+section{padding:60px 0}.alt{background:var(--bg2)}
+.stats{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+.stats div{border-top:2px solid var(--acc);padding-top:14px}
+.stats b{font:400 52px/1 "DM Serif Display",serif;display:block;color:var(--acc)}.stats span{font-size:14px;color:var(--mute)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .35s,border-color .3s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 20px 40px rgba(14,26,43,.12)}
+.card .stage{border:0;border-radius:0;padding:26px 14px 6px;background:linear-gradient(160deg,var(--bg2),color-mix(in srgb,var(--f) 24%,var(--bg2)))}
+.card .in{padding:16px 20px 20px}.card h3{font-size:25px}.card p{color:var(--mute);font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chips button,.sw button,.sg button{font:500 14px "DM Sans",sans-serif;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:.2s}
+.chips button.on,.sg button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cfg{display:grid;gap:20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.panel h3{font-size:22px;margin-bottom:12px}.panel+.panel{margin-top:14px}
+.sw{display:flex;gap:12px;flex-wrap:wrap}
+.sw button{width:46px;height:46px;padding:0;border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 1px var(--line);transition:.25s}
+.sw button.on{box-shadow:0 0 0 2px var(--acc);transform:scale(1.1)}
+.sg{display:flex;gap:8px;flex-wrap:wrap}
+.fn{font-size:14px;color:var(--mute);margin-top:10px}
+.sum{white-space:pre-line;font-size:14px;color:var(--mute);background:var(--bg2);border-radius:14px;padding:14px;margin:14px 0}
+.split{display:grid;gap:30px}
+.ph{aspect-ratio:4/3;border-radius:22px;background:linear-gradient(135deg,#0e1a2b,#2c4a5a 55%,#8fae9a);display:grid;place-items:center;color:#e6efe9;font-size:13px;text-align:center;padding:14px}
+.st1{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line)}
+.st1 .serif{font-size:44px;color:var(--acc)}.st1 h3{font-size:25px}.st1 p{color:var(--mute);font-size:15px}
+.fq{border-bottom:1px solid var(--line)}
+.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;background:none;border:0;color:var(--ink);font:500 16px "DM Sans",sans-serif;text-align:left;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none}
+.pm{position:relative;width:18px;height:18px;flex:none;transition:transform .45s cubic-bezier(.32,.72,0,1)}
+.pm::before,.pm::after{content:"";position:absolute;left:0;top:8px;width:18px;height:2px;background:var(--acc);transition:transform .45s cubic-bezier(.32,.72,0,1)}.pm::after{transform:rotate(90deg)}
+.fq.open .pm{transform:rotate(180deg)}.fq.open .pm::after{transform:rotate(0)}
+.fa{height:0;overflow:hidden;transition:height .55s cubic-bezier(.32,.72,0,1)}
+.fa p{color:var(--mute);font-size:15px;padding-bottom:20px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .55s cubic-bezier(.32,.72,0,1)}
+.fq.open .fa p{opacity:1;transform:none;transition-delay:.1s}
+.fin{background:linear-gradient(135deg,var(--dk),#1c3a4a);color:#f3ede2;border-radius:30px;padding:44px 26px}
+.fin h2{color:#f3ede2}.fin .sub{color:#a9bccb}.fin .btn.o{color:#f3ede2;border-color:#f3ede2}.fin .btn.o:hover{background:#f3ede2;color:#0e1a2b}
+.rows{max-width:560px;margin-top:26px}.row{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px}.row span{color:#a9bccb}.row b{font-weight:500;text-align:right}
+select{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-top:4px}
+label{font-size:13px;color:var(--mute);font-weight:500;display:block;margin-bottom:12px}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:30px 22px 40px}
+.bar2{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line)}.bar2 a{flex:1;padding:13px;font-size:14px}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc),var(--sage));z-index:60}
+@media(min-width:820px){nav{display:flex}.mb{display:none}.hero .w{grid-template-columns:1fr 1.1fr;align-items:center}.stats{grid-template-columns:repeat(4,1fr)}.cfg{grid-template-columns:1.2fr 1fr}.split{grid-template-columns:1fr 1fr;align-items:center}.bar2{display:none}body{padding-bottom:0}.fin{padding:64px}}
+@media(prefers-reduced-motion:reduce){.curtain{display:none}.hero *,.mq div{animation:none!important}.rv{opacity:1;transform:none;transition:none}.fa,.fa p,.pm,.pm::before,.pm::after,.menu{transition:none}}
+</style>
+</head>
+<body>
+<div class="curtain" aria-hidden="true"><div>Leeds Sofa Company<small>Leeds · Over 40 years</small></div></div>
+<div class="prog" id="pg"></div>
+<div class="menu" id="menu"><a href="#home">Home</a><a href="#collection">Collection</a><a href="#design">Design your sofa</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<header><div class="w"><a class="logo" href="#home">Leeds <i>Sofa</i> Company</a>
+<nav id="nav"><a href="#home">Home</a><a href="#collection">Collection</a><a href="#design">Design your sofa</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="tel:+441132623044" style="padding:10px 18px;font-size:14px">Call</a><button class="mb" id="mb" aria-label="Menu"><i></i></button></div></header>
+
+<main>
+<!-- HOME -->
+<div class="pg on" id="p-home">
+<div class="hero"><div class="w">
+<div><span class="tag">Leeds · Sofas &amp; bespoke furniture</span>
+<h1>Sofas made <em>your way</em></h1>
+<p class="lead">Over 40 years of experience making upholstered and bespoke furniture in Leeds. Choose your size, fabric and legs, and see it come to life.</p>
+<div class="cta"><a class="btn" href="#design">Design your sofa</a><a class="btn o" href="#collection">View collection</a></div></div>
+<div class="stage" id="hs"><div id="hsv"></div><small>Concept preview · your real sofas go here</small></div>
+</div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<section><div class="w rv"><div class="stats">
+<div><b>40+</b><span>years of experience</span></div><div><b>Leeds</b><span>manufacturer, Astra Park</span></div><div><b>Bespoke</b><span>furniture made to order</span></div><div><b>1:1</b><span>personal service</span></div></div></div></section>
+<section class="alt"><div class="w rv"><span class="tag">Collection</span><h2>Designed for <em>real living</em></h2><p class="sub">A glimpse of the range. Your actual sofas and photos replace these concept pieces.</p><div class="grid" id="hc"></div><div class="cta"><a class="btn o" href="#collection">See the full collection</a></div></div></section>
+<section><div class="w rv split"><div class="ph">Photo: workshop or showroom</div><div><span class="tag">Our story</span><h2>Four decades of <em>craft</em></h2><p class="sub">Leeds Sofa Company is a Leeds manufacturer of sofas and bespoke furniture, backed by more than 40 years of experience.</p><a class="btn" href="#about">Read more</a></div></div></section>
+<section class="alt"><div class="w rv"><div class="fin" style="text-align:center"><h2>Ready to design your <em style="color:#d89a56">perfect sofa?</em></h2><p class="sub" style="margin-inline:auto">Pick your size, fabric and legs in a minute, then call us to talk it through.</p><div class="cta" style="justify-content:center"><a class="btn" href="#design">Start designing</a><a class="btn o" href="tel:+441132623044">+44 113 262 3044</a></div></div></div></section>
+</div>
+
+<!-- COLLECTION -->
+<div class="pg" id="p-collection">
+<section><div class="w"><span class="tag">Collection</span><h1 style="font-size:clamp(40px,9vw,76px)">The <em>collection</em></h1><p class="sub">Illustrative range. We will replace these with your real models, fabrics and prices.</p>
+<div class="chips" id="ch"><button class="on" data-f="all">All</button><button data-f="2">2-seater</button><button data-f="3">3-seater</button><button data-f="4">4-seater</button></div>
+<div class="grid" id="cg"></div></div></section></div>
+
+<!-- DESIGN -->
+<div class="pg" id="p-design">
+<section><div class="w"><span class="tag">Design studio</span><h1 style="font-size:clamp(40px,9vw,76px)">Design your <em>sofa</em></h1><p class="sub">Choose a size, fabric colour, arms and legs. This is a visual preview; final fabrics and options are agreed with the team.</p>
+<div class="cfg"><div><div class="stage" id="ds"><div id="dsv"></div><small id="dn"></small></div></div>
+<div>
+<div class="panel"><h3>Size</h3><div class="sg" id="g-s"><button data-v="2">2-seater</button><button data-v="3" class="on">3-seater</button><button data-v="4">4-seater</button></div></div>
+<div class="panel"><h3>Fabric colour</h3><div class="sw" id="g-f"></div><p class="fn" id="fn"></p></div>
+<div class="panel"><h3>Arms</h3><div class="sg" id="g-a"><button data-v="sq" class="on">Square</button><button data-v="rd">Rounded</button></div></div>
+<div class="panel"><h3>Legs</h3><div class="sg" id="g-l"><button data-v="#a8794a" class="on">Oak</button><button data-v="#1b1b1f">Black</button><button data-v="#d4a84b">Brass</button></div></div>
+<div class="panel"><h3>Your design</h3><div class="sum" id="sm"></div><div class="cta" style="margin-top:0"><button class="btn" id="cp">Copy my design</button><a class="btn o" href="tel:+441132623044">Call us</a></div><p class="fn" id="cm"></p></div>
+</div></div></div></section></div>
+
+<!-- ABOUT -->
+<div class="pg" id="p-about">
+<section><div class="w"><span class="tag">About us</span><h1 style="font-size:clamp(40px,9vw,76px)">Made in Leeds, <em>for over 40 years</em></h1><p class="sub">Leeds Sofa Company makes sofas and bespoke furniture from its base at Astra Park, Leeds.</p>
+<div class="split"><div class="ph">Photo: our workshop</div><div>
+<div class="st1"><div class="serif">1</div><div><h3>Experience</h3><p>More than 40 years in the business of making upholstered and bespoke furniture.</p></div></div>
+<div class="st1"><div class="serif">2</div><div><h3>Bespoke</h3><p>Furniture made to order, so it fits your home, your style and your needs.</p></div></div>
+<div class="st1"><div class="serif">3</div><div><h3>Local</h3><p>A Leeds manufacturer you can call, visit and talk to directly.</p></div></div></div></div></div></section>
+<section class="alt"><div class="w rv"><span class="tag">Questions</span><h2>Good to <em>know</em></h2><p class="sub">&nbsp;</p>
+<div class="fq"><button type="button" aria-expanded="false">Can I order a sofa made to my own size?<span class="pm"></span></button><div class="fa"><div><p>Yes, we make bespoke furniture. Call us to talk through your room and requirements.</p></div></div></div>
+<div class="fq"><button type="button" aria-expanded="false">Where are you based?<span class="pm"></span></button><div class="fa"><div><p>Unit B2, Astra Park, Leeds.</p></div></div></div>
+<div class="fq"><button type="button" aria-expanded="false">How do I get a quote?<span class="pm"></span></button><div class="fa"><div><p>Design your sofa in the studio, copy your design, and call us on +44 113 262 3044.</p></div></div></div></div></section></div>
+
+<!-- CONTACT -->
+<div class="pg" id="p-contact">
+<section><div class="w"><div class="fin"><span class="tag" style="color:#d89a56">Contact</span><h2>Let’s talk <em style="color:#d89a56">sofas</em></h2><p class="sub">Call us to discuss your project, or to arrange a visit.</p>
+<div class="cta"><a class="btn" href="tel:+441132623044">Call +44 113 262 3044</a><a class="btn o" href="#design">Design a sofa first</a></div>
+<div class="rows"><div class="row"><span>Phone</span><b>+44 113 262 3044</b></div><div class="row"><span>Address</span><b>Unit B2, Astra Park, Leeds</b></div><div class="row"><span>Experience</span><b>Over 40 years</b></div><div class="row"><span>Find us</span><b>Facebook: Leeds Sofa Company</b></div></div></div></div></section></div>
+</main>
+<footer>© Leeds Sofa Company Ltd. Concept demo, not the official website.</footer>
+<div class="bar2"><a class="btn" href="tel:+441132623044">Call</a><a class="btn o" href="#design">Design a sofa</a></div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var FAB=[["Oat","#cdbfa6"],["Sage","#8fae9a"],["Ink","#1f3550"],["Camel","#b9824a"],["Rose","#c98b86"],["Charcoal","#3b3f46"],["Teal","#2f6b6a"]];
+function sofa(n,arm){var W=110+n*105,cw=(W-100)/n,r=arm==="rd"?24:8,s='<svg class="sf" viewBox="0 0 '+W+' 190"><ellipse class="sh" cx="'+W/2+'" cy="176" rx="'+(W/2-6)+'" ry="9"/>';
+s+='<rect class="bk" x="34" y="28" width="'+(W-68)+'" height="96" rx="'+(arm==="rd"?30:12)+'"/>';
+for(var i=0;i<n;i++)s+='<rect class="cu" x="'+(52+i*cw)+'" y="42" width="'+(cw-6)+'" height="62" rx="14"/>';
+s+='<rect class="st" x="40" y="104" width="'+(W-80)+'" height="46" rx="10"/>';
+for(i=0;i<n;i++)s+='<rect class="cu" x="'+(50+i*cw)+'" y="92" width="'+(cw-4)+'" height="30" rx="12"/>';
+s+='<rect class="ar" x="6" y="70" width="46" height="84" rx="'+r+'"/><rect class="ar" x="'+(W-52)+'" y="70" width="46" height="84" rx="'+r+'"/>';
+[22,W-34].forEach(function(x){s+='<rect class="lg" x="'+x+'" y="152" width="12" height="24" rx="3"/>'});
+return s+'</svg>'}
+function setC(el,i){el.style.setProperty("--f",FAB[i][1])}
+// hero
+var hi=0;$("hsv").innerHTML=sofa(3,"sq");setC($("hs"),0);setInterval(function(){hi=(hi+1)%FAB.length;setC($("hs"),hi)},2600);
+// marquee
+var m="";["Sofas","Bespoke furniture","Made in Leeds","Over 40 years","Your fabric","Your size"].concat(["Sofas","Bespoke furniture","Made in Leeds","Over 40 years","Your fabric","Your size"]).forEach(function(t){m+="<span>"+t+"</span><em>✦</em>"});$("mq").innerHTML=m;
+// cards
+var P=[[2,"sq",1,"Compact two-seater"],[3,"rd",0,"Classic three-seater"],[4,"sq",2,"Generous four-seater"],[3,"sq",3,"Modern three-seater"],[2,"rd",4,"Cosy two-seater"],[4,"rd",6,"Statement four-seater"]];
+function card(p,i){return '<div class="card" data-n="'+p[0]+'"><div class="stage" style="--f:'+FAB[p[2]][1]+'">'+sofa(p[0],p[1])+'</div><div class="in"><h3>Model 0'+(i+1)+'</h3><p>'+p[3]+' · in '+FAB[p[2]][0]+'</p></div></div>'}
+$("hc").innerHTML=P.slice(0,3).map(card).join("");$("cg").innerHTML=P.map(card).join("");
+$("ch").onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle("on",x===b)});[].forEach.call($("cg").children,function(c){c.style.display=(b.dataset.f==="all"||c.dataset.n===b.dataset.f)?"":"none"})};
+// configurator
+var st={n:"3",f:0,a:"sq",l:"#a8794a"},LN={"#a8794a":"Oak","#1b1b1f":"Black","#d4a84b":"Brass"};
+$("g-f").innerHTML=FAB.map(function(f,i){return '<button data-i="'+i+'" style="background:'+f[1]+'" aria-label="'+f[0]+'"'+(i===0?' class="on"':'')+'></button>'}).join("");
+function ren(){$("dsv").innerHTML=sofa(+st.n,st.a);var d=$("ds");d.style.setProperty("--f",FAB[st.f][1]);d.style.setProperty("--l",st.l);
+var t=st.n+"-seater sofa · "+FAB[st.f][0]+" · "+(st.a==="sq"?"square":"rounded")+" arms · "+LN[st.l]+" legs";$("dn").textContent=t;$("fn").textContent="Fabric: "+FAB[st.f][0]+" (colour preview)";
+$("sm").textContent="Size: "+st.n+"-seater\nFabric: "+FAB[st.f][0]+"\nArms: "+(st.a==="sq"?"Square":"Rounded")+"\nLegs: "+LN[st.l]}
+function grp(id,key,fn){$(id).onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle("on",x===b)});st[key]=fn?fn(b):b.dataset.v;ren()}}
+grp("g-s","n");grp("g-a","a");grp("g-l","l");grp("g-f","f",function(b){return +b.dataset.i});ren();
+$("cp").onclick=function(){var t="Hello Leeds Sofa Company, I’d like a quote for: "+$("sm").textContent.replace(/\n/g,", ");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){$("cm").textContent="Copied. Now call us and read it out, or send it to us."},function(){$("cm").textContent=t});};
+// accordion
+function fh(f){var a=f.querySelector(".fa");a.style.height=f.classList.contains("open")?a.firstElementChild.offsetHeight+"px":"0px"}
+document.querySelectorAll(".fq button").forEach(function(b){b.addEventListener("mousedown",function(e){e.preventDefault()});b.addEventListener("click",function(){var f=b.parentNode,o=f.classList.toggle("open");b.setAttribute("aria-expanded",o);fh(f)})});
+addEventListener("resize",function(){document.querySelectorAll(".fq.open").forEach(fh)});
+// router
+var IDS=["home","collection","design","about","contact"];
+function route(){var h=(location.hash||"#home").slice(1);if(IDS.indexOf(h)<0)h="home";IDS.forEach(function(i){$("p-"+i).classList.toggle("on",i===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
+$("menu").classList.remove("open");document.body.style.overflow="";window.scrollTo(0,0);document.querySelectorAll(".fq.open").forEach(fh)}
+addEventListener("hashchange",route);route();
+$("mb").onclick=function(){var o=$("menu").classList.toggle("open");document.body.style.overflow=o?"hidden":""};
+addEventListener("scroll",function(){var h=document.documentElement;$("pg").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+"%"},{passive:true});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("in")})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
